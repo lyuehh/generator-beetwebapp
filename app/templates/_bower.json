@@ -1,0 +1,17 @@
+{
+  "name": "package",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "*",
+    "angular": "*",
+    "angular-ui-router": "*",
+    "angular-sanitize": "*",
+    "angular-resource": "*",
+    "underscore": "*",
+    "bootstrap": "*",
+    "font-awesome": "*",
+    "moment": "*",
+    "d3": "*"
+  }
+}
+
