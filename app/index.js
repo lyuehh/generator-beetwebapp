@@ -49,17 +49,22 @@ var AsdfwebappGenerator = yeoman.generators.Base.extend({
       this.src.copy('_bower.json', 'bower.json');
       this.src.copy('gulpfile.js', 'gulpfile.js');
 
+      this.src.copy('styles/main.scss', 'app/styles/main.scss');
+      this.src.copy('styles/admin-2.css', 'app/styles/admin-2.css');
+
       this.src.copy('index.html', 'app/index.html');
-      this.src.copy('main.scss', 'app/styles/main.scss');
+      this.src.copy('partials/index.html', 'app/partials/index.html');
+      this.src.copy('partials/header.html', 'app/partials/header.html');
+      this.src.copy('partials/footer.html', 'app/partials/footer.html');
 
-      this.src.copy('app.js', 'app/scripts/app.js');
-      this.src.copy('app-controller.js', 'app/scripts/app-controller.js');
-      this.src.copy('app-filter.js', 'app/scripts/app-filter.js');
-      this.src.copy('app-service.js', 'app/scripts/app-service.js');
-      this.src.copy('app-directive.js', 'app/scripts/app-directive.js');
+      this.src.copy('scripts/app.js', 'app/scripts/app.js');
+      this.src.copy('scripts/app-controller.js', 'app/scripts/app-controller.js');
+      this.src.copy('scripts/app-filter.js', 'app/scripts/app-filter.js');
+      this.src.copy('scripts/app-service.js', 'app/scripts/app-service.js');
+      this.src.copy('scripts/app-directive.js', 'app/scripts/app-directive.js');
 
-      this.src.copy('highcharts.js', 'app/vendor/highcharts.js');
-      this.src.copy('av.js', 'app/vendor/av.js');
+      this.src.copy('vendor/highcharts.js', 'app/vendor/highcharts.js');
+      this.src.copy('vendor/av.js', 'app/vendor/av.js');
 
     },
 
