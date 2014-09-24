@@ -1,6 +1,11 @@
 Asdfwebapp generator
 ===================
 
+Demo
+====
+
+<https://github.com/lyuehh/asdfwebapp-demo>
+
 
 安装
 ====
