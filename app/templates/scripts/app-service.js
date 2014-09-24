@@ -6,9 +6,13 @@
 
     /* @ngInject */
     function myService() {
-        this.xx = function() {
+        /* jshint validthis: true */
+        var self = this;
 
-        }
+        self.xx = function() {
+
+        };
     }
 })();
+
 
