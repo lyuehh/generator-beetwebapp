@@ -11,7 +11,8 @@ Demo
 ====
 
 * 安装 node <http://nodejs.org/>
-* 安装 yo  `npm install -g generator-asdfwebapp`
+* 安装 yo `npm install -g yo`
+* 安装 asdfwebapp-generator `npm install -g generator-asdfwebapp`
 
 开始使用
 ========
