@@ -1,22 +1,20 @@
 'use strict';
 
 describe('controllers', function(){
-  var scope;
+    var scope;
 
-  beforeEach(module('test'));
+    beforeEach(module('test'));
 
-  beforeEach(inject(function($rootScope) {
-  	scope = $rootScope.$new();
-  }));
+    beforeEach(inject(function($rootScope) {
+        scope = $rootScope.$new();
+    }));
 
-  it('should define more than 5 awesome things', inject(function($controller) {
-    expect(scope.awesomeThings).toBeUndefined();
+    it('should define more than 5 awesome things', inject(function($controller) {
+        $controller('MainCtrl as vm', {
+            $scope: scope
+        });
+        var vm = scope.vm;
 
-    $controller('MainCtrl', {
-      $scope: scope
-  	});
-
-    expect(angular.isArray(scope.awesomeThings)).toBeTruthy();
-    expect(scope.awesomeThings.length > 5).toBeTruthy();
-  }));
+        expect(angular.isDate(vm.date)).toBeTruthy();
+    }));
 });

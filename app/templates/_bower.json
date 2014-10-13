@@ -7,6 +7,7 @@
     "angular-ui-router": "*",
     "angular-sanitize": "*",
     "angular-resource": "*",
+    "angular-mocks": "*",
     "underscore": "*",
     "bootstrap": "*",
     "font-awesome": "*",

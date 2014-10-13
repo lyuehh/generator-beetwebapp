@@ -8,6 +8,7 @@ module.exports = function(config) {
     files : [ //!\\ Ignored through gulp-karma //!\\
         'src/bower_components/angular/angular.js',
         'src/bower_components/angular/angular-route.js',
+        'src/bower_components/angular-ui-router/release/angular-ui-router.js',
         'src/bower_components/angular-mocks/angular-mocks.js',
         'src/{app,components}/** /*.js',
         'test/unit/** /*.js'
