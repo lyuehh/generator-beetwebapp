@@ -6,7 +6,8 @@ angular.module('app', ['ui.router', 'app.navbar'])
     .state('index', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        controllerAs: 'vm'
     })
     .state('about', {
         url: '/about',

@@ -7,6 +7,7 @@
     /* @ngInject */
     function MainCtrl() {
         var vm = this;
+        vm.date = new Date();
 
     }
 
