@@ -51,6 +51,7 @@ var AsdfwebappGenerator = yeoman.generators.Base.extend({
       this.src.copy('main/main.ctrl.js', 'src/app/main/main.ctrl.js');
       this.src.copy('main/main.scss', 'src/app/main/main.scss');
       this.src.copy('main/main.html', 'src/app/main/main.html');
+      this.src.copy('main/about.html', 'src/app/main/about.html');
 
       this.src.copy('assets/images/angular.png', 'src/assets/images/angular.png');
 
@@ -68,7 +69,7 @@ var AsdfwebappGenerator = yeoman.generators.Base.extend({
   },
 
   end: function () {
-    // this.installDependencies();
+    this.installDependencies();
   }
 });
 
