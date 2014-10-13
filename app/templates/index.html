@@ -8,25 +8,26 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-    <!-- build:css({.tmp,app}) styles/vendor.css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="styles/admin-2.css">
+    <!-- build:css({.tmp,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/beet-thirdparty-assets/styles/admin.css" />
+    <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css({.tmp,src}) styles/main.css -->
+    <link rel="stylesheet" href="app/main/main.css">
     <!-- endbuild -->
 
 </head>
 <body>
 
-    <div ng-include="'/partials/header.html'"></div>
+    <div ng-include="'/components/navbar/navbar.html'"></div>
     <div class="site-content">
         <div ui-view></div>
     </div>
-    <div ng-include="'/partials/footer.html'"></div>
+    <div ng-include=""></div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -39,18 +40,17 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/beet-thirdparty-assets/scripts/av.js"></script>
+    <script src="bower_components/beet-thirdparty-assets/scripts/highcharts.js"></script>
     <!-- endbower -->
 
-    <script src="vendor/highcharts.js"></script>
-    <script src="vendor/av.js"></script>
     <!-- endbuild -->
 
-    <!-- build:js({app,.tmp}) scripts/main.js -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/app-directive.js"></script>
-    <script src="scripts/app-service.js"></script>
-    <script src="scripts/app-filter.js"></script>
-    <script src="scripts/app-controller.js"></script>
+    <!-- build:js({src,.tmp}) scripts/main.js -->
+    <script src="app/app.js"></script>
+    <script src="app/main/main.ctrl.js"></script>
+    <script src="components/navbar/navbar.ctrl.js"></script>
+
     <!-- inject:partials -->
     <!-- endinject -->
     <!-- endbuild -->

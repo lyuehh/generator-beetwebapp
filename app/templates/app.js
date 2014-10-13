@@ -1,16 +1,16 @@
 'use strict';
 
-angular.module('app', ['ui.router', 'ngSanitize', 'ngResource'])
-.constant('appConfig', {
-    'backend': 'http://xxx.xx.com',
-    'version': '0.0.1'
-})
+angular.module('app', ['ui.router', 'app.navbar'])
 .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state('index', {
         url: '/',
-        templateUrl: 'partials/index.html',
+        templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
+    })
+    .state('about', {
+        url: '/about',
+        templateUrl: 'app/main/about.html'
     });
     $urlRouterProvider.otherwise('/');
 });

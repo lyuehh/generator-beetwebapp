@@ -1,10 +1,9 @@
-Asdfwebapp generator
+Angrwebapp generator
 ===================
 
 Demo
 ====
 
-<https://github.com/lyuehh/asdfwebapp-demo>
 
 
 安装
@@ -12,13 +11,13 @@ Demo
 
 * 安装 node <http://nodejs.org/>
 * 安装 yo `npm install -g yo`
-* 安装 asdfwebapp-generator `npm install -g generator-asdfwebapp`
+* 安装 asdfwebapp-generator `npm install -g generator-Angrwebapp`
 
 开始使用
 ========
 
 * `cd /path/to/dir`
-* `yo asdfwebapp`
+* `yo angrwebapp`
 * `gulp serve`
 * done
 

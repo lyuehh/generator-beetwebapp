@@ -10,61 +10,52 @@ var AsdfwebappGenerator = yeoman.generators.Base.extend({
   },
 
   prompting: function () {
-    var done = this.async();
-
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the exquisite Asdfwebapp generator!'
-    ));
-
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-    done();
-
-    /*
-    this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
-      done();
-    }.bind(this));
-    */
   },
 
   writing: {
     app: function () {
-      this.dest.mkdir('app');
-      this.dest.mkdir('app/bower_components');
-      this.dest.mkdir('app/images');
-      this.dest.mkdir('app/partials');
-      this.dest.mkdir('app/scripts');
-      this.dest.mkdir('app/styles');
-      this.dest.mkdir('app/vendor');
+      this.dest.mkdir('src');
+      this.dest.mkdir('src/bower_components');
+      this.dest.mkdir('src/app');
+      this.dest.mkdir('src/app/main');
+      this.dest.mkdir('src/components');
+      this.dest.mkdir('src/components/navbar');
 
       this.dest.mkdir('test');
+      this.dest.mkdir('test/e2e');
+      this.dest.mkdir('test/unit');
+
+      this.dest.mkdir('gulp');
 
       this.src.copy('_package.json', 'package.json');
       this.src.copy('_bower.json', 'bower.json');
+
       this.src.copy('gulpfile.js', 'gulpfile.js');
+      this.src.copy('gulp/build.js', 'gulp/build.js');
+      this.src.copy('gulp/e2e-tests.js', 'gulp/e2e-tests.js');
+      this.src.copy('gulp/proxy.js', 'gulp/proxy.js');
+      this.src.copy('gulp/server.js', 'gulp/server.js');
+      this.src.copy('gulp/unit-tests.js', 'gulp/unit-tests.js');
+      this.src.copy('gulp/watch.js', 'gulp/watch.js');
+      this.src.copy('gulp/wiredep.js', 'gulp/wiredep.js');
 
-      this.src.copy('styles/main.scss', 'app/styles/main.scss');
-      this.src.copy('styles/admin-2.css', 'app/styles/admin-2.css');
+      this.src.copy('test/karma.conf.js', 'test/karma.conf.js');
+      this.src.copy('test/protractor.conf.js', 'test/protractor.conf.js');
+      this.src.copy('test/e2e/main.js', 'test/e2e/main.js');
+      this.src.copy('test/unit/main.js', 'test/unit/main.js');
 
-      this.src.copy('index.html', 'app/index.html');
-      this.src.copy('partials/index.html', 'app/partials/index.html');
-      this.src.copy('partials/header.html', 'app/partials/header.html');
-      this.src.copy('partials/footer.html', 'app/partials/footer.html');
+      this.src.copy('index.html', 'src/index.html');
+      this.src.copy('404.html', 'src/404.html');
 
-      this.src.copy('scripts/app.js', 'app/scripts/app.js');
-      this.src.copy('scripts/app-controller.js', 'app/scripts/app-controller.js');
-      this.src.copy('scripts/app-filter.js', 'app/scripts/app-filter.js');
-      this.src.copy('scripts/app-service.js', 'app/scripts/app-service.js');
-      this.src.copy('scripts/app-directive.js', 'app/scripts/app-directive.js');
+      this.src.copy('app.js', 'src/app/app.js');
+      this.src.copy('main/main.ctrl.js', 'src/app/main/main.ctrl.js');
+      this.src.copy('main/main.scss', 'src/app/main/main.scss');
+      this.src.copy('main/main.html', 'src/app/main/main.html');
 
-      this.src.copy('vendor/highcharts.js', 'app/vendor/highcharts.js');
-      this.src.copy('vendor/av.js', 'app/vendor/av.js');
+      this.src.copy('assets/images/angular.png', 'src/assets/images/angular.png');
+
+      this.src.copy('components/navbar/navbar.ctrl.js', 'src/components/navbar/navbar.ctrl.js');
+      this.src.copy('components/navbar/navbar.html', 'src/components/navbar/navbar.html');
 
     },
 
@@ -77,7 +68,7 @@ var AsdfwebappGenerator = yeoman.generators.Base.extend({
   },
 
   end: function () {
-    this.installDependencies();
+    // this.installDependencies();
   }
 });
 

@@ -1,4 +1,4 @@
-<header class="navbar navbar-default" id="top" role="banner">
+<header class="navbar navbar-default" id="top" role="banner" ng-controller="NavBarCtrl as vm">
     <div class="navbar-header">
         <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -11,7 +11,10 @@
     <nav class="navbar-collapse bs-navbar-collapse collapse" role="navigation" style="height: 1px;">
         <ul class="nav navbar-nav">
             <li ui-sref-active="active">
-                <a ui-sref="index">Index</a>
+                <a ui-sref="about">About</a>
+            </li>
+            <li>
+                <a>{{ vm.date | date: 'yyyy-MM-dd HH:mm' }}</a>
             </li>
         </ul>
         <ul class="nav navbar-top-links navbar-right">
@@ -32,3 +35,4 @@
         </ul>
     </nav>
 </header>
+

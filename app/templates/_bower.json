@@ -11,7 +11,8 @@
     "bootstrap": "*",
     "font-awesome": "*",
     "moment": "*",
-    "d3": "*"
+    "d3": "*",
+    "beet-thirdparty-assets": "0.0.1"
   }
 }
 
