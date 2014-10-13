@@ -1,4 +1,4 @@
-Angrwebapp generator
+Beetwebapp generator
 ===================
 
 Demo
@@ -11,13 +11,13 @@ Demo
 
 * 安装 node <http://nodejs.org/>
 * 安装 yo `npm install -g yo`
-* 安装 asdfwebapp-generator `npm install -g generator-Angrwebapp`
+* 安装 asdfwebapp-generator `npm install -g generator-beetwebapp`
 
 开始使用
 ========
 
 * `cd /path/to/dir`
-* `yo angrwebapp`
+* `yo beetwebapp`
 * `gulp serve`
 * done
 
