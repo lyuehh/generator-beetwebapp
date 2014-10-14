@@ -9,7 +9,7 @@ describe('controllers', function(){
         scope = $rootScope.$new();
     }));
 
-    it('should define more than 5 awesome things', inject(function($controller) {
+    it('should have vm.date', inject(function($controller) {
         $controller('MainCtrl as vm', {
             $scope: scope
         });
