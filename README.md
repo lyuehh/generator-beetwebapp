@@ -4,7 +4,7 @@ Beetwebapp generator
 Demo
 ====
 
-
+<https://github.com/lyuehh/beetwebapp-demo>
 
 安装
 ====
